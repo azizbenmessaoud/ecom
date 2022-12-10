@@ -8,7 +8,7 @@ class CustomerModelAdmin(ModelAdmin):
     list_display = (
         'username',
         'email',
-        'phone_number',
+        #'phone_number',
         'age',
         'address',
         'active',

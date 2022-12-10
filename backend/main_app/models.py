@@ -7,7 +7,11 @@ class Customer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=300, unique=True)
     email = models.EmailField(unique=True, blank=False, null=False)
-    phone_number = PhoneNumberField(region="RO")
+    
+    # problem 2 : dont know why phone number field is not displaying a widget on the admin side
+    
+    # phone_number = PhoneNumberField(region="RO")
+    
     age = models.IntegerField(default=18, blank=True)
     address = models.CharField(max_length=300, default='no street', blank=True)
     active = models.BooleanField(default=False)
